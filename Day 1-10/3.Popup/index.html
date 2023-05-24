@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <a class="button" onclick="toggleNewsLetter()">Subscribe Us</a>
+
+    <div id="newsletter">
+        <div class="icon">
+            <h2>Join Our Exclusive Newsletter</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur alias amet hic repellat repellendus aliquid sit error numquam molestiae ad!</p>
+            <form action="">
+                <div class="box">
+                    <input type="email" placeholder="Enter Email">
+                </div>
+                <div class="box">
+                    <button type="submit" value="Sign Up" onclick="toggleNewsLetter()">Sign Up</button>
+                </div>
+            </form>
+        </div>
+
+        <a class="close" onclick="toggleNewsLetter()"></a>
+    </div> 
     <script src="script.js"></script>
 </body>
 </html>
