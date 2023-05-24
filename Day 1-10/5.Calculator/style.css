@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator h1{
+    text-align: center;
+    color: orangered;
+}
+
+.calculator{
+    background-color: black;
+    padding: 20px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: auto;
+}
+
+.btn, .btn-clear, .btn-equal{
+    color: white;
+    background-color: orangered;
+}
+
+form{
+    margin: 10px;
+    padding: 10px;
+    width: 100%;    
+}
