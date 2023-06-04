@@ -57,7 +57,7 @@
     width: 100%;
 }
 
-.content-area textarea {
+textarea {
     width: 100%;
     resize: none;
     border: 1px solid black;
@@ -87,6 +87,10 @@
     font-size: 20px;
     font-weight: bold;
     margin-right: 5px;
+}
+
+#fonts div i{
+    margin: 3px;
 }
 
 .bold {
