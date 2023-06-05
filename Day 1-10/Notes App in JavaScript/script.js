@@ -1,25 +1,22 @@
-const addBox = document.querySelector(".add-box");
-const popupBox = document.querySelector(".popup-box");
-const popupTitle = popupBox.querySelector("header p");
-const closeIcon = popupBox.querySelector("header i");
-const titleTag = popupBox.querySelector("input");
-const descTag = popupBox.querySelector("textarea");
-const addBtn = popupBox.querySelector("button");
+const addBox = document.querySelector(".add-box"),
+popupBox = document.querySelector(".popup-box"),
+popupTitle = popupBox.querySelector("header p"),
+closeIcon = popupBox.querySelector("header i"),
+titleTag = popupBox.querySelector("input"),
+descTag = popupBox.querySelector("textarea"),
+addBtn = popupBox.querySelector("button");
 
 const months = ["January", "February", "March", "April", "May", "June", "July",
-"August", "September", "October", "November", "December"];
-
+              "August", "September", "October", "November", "December"];
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");
-let isUpdate = false;
-let updateId;
+let isUpdate = false, updateId;
 
 addBox.addEventListener("click", () => {
-    popupTitle.innerHTML = "Add a new Note";
-    addBtn.innerHTML = "Add Note";
+    popupTitle.innerText = "Add a new Note";
+    addBtn.innerText = "Add Note";
     popupBox.classList.add("show");
     document.querySelector("body").style.overflow = "hidden";
-    // if(window.innerWidth > 660) titleTag.focus();
-    titleTag.focus();
+    if(window.innerWidth > 660) titleTag.focus();
 });
 
 closeIcon.addEventListener("click", () => {
@@ -36,7 +33,7 @@ function showNotes() {
         let filterDesc = note.description.replaceAll("\n", '<br/>');
         let liTag = `<li class="note">
                         <div class="details">
-                            <p>${id+1}. ${note.title}</p>
+                            <p>${note.title}</p>
                             <span>${filterDesc}</span>
                         </div>
                         <div class="bottom-content">
@@ -61,10 +58,10 @@ function showMenu(elem) {
         if(e.target.tagName != "I" || e.target != elem) {
             elem.parentElement.classList.remove("show");
         }
-    })
+    });
 }
 
-function deleteNote(noteId){
+function deleteNote(noteId) {
     let confirmDel = confirm("Are you sure you want to delete this note?");
     if(!confirmDel) return;
     notes.splice(noteId, 1);
@@ -73,7 +70,7 @@ function deleteNote(noteId){
 }
 
 function updateNote(noteId, title, filterDesc) {
-    let description = filterDesc.replaceAll("<br>", "\r\n");
+    let description = filterDesc.replaceAll('<br/>', '\r\n');
     updateId = noteId;
     isUpdate = true;
     addBox.click();
@@ -83,26 +80,24 @@ function updateNote(noteId, title, filterDesc) {
     addBtn.innerText = "Update Note";
 }
 
-
 addBtn.addEventListener("click", e => {
     e.preventDefault();
-    let title = titleTag.value.trim();
+    let title = titleTag.value.trim(),
     description = descTag.value.trim();
 
-    if (title || description) {
-        let currentDate = new Date();
-        let month = months[currentDate.getMonth()];
-        let day = currentDate.getDate();
-        let year = currentDate.getFullYear();
+    if(title || description) {
+        let currentDate = new Date(),
+        month = months[currentDate.getMonth()],
+        day = currentDate.getDate(),
+        year = currentDate.getFullYear();
 
-        let noteInfo = {title, description, date: `${month} ${day}, ${year}`};
+        let noteInfo = {title, description, date: `${month} ${day}, ${year}`}
         if(!isUpdate) {
             notes.push(noteInfo);
         } else {
             isUpdate = false;
             notes[updateId] = noteInfo;
         }
-
         localStorage.setItem("notes", JSON.stringify(notes));
         showNotes();
         closeIcon.click();
