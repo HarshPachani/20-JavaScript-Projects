@@ -5,30 +5,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All In One</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 350px);
+            align-items: center;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid burlywood;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .container img {
+            position: relative;
+            border-radius: 10px;
+            width: 100% !important;
+            object-fit:cover;
+        }
+
+        .container a {
+            text-align: center;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .container:hover{
+            position: relative;
+            top: 10px;
+            bottom: 10px;
+            box-shadow: 10px 10px 20px black;
+        }
+    </style>
 </head>
 <body>
-    <a href="Day 1-20/1.JS Counter/index.html">JS Counter</a><br>
-    <a href="Day 1-20/2.Expend_Cards/index.html">Expend Cards</a><br>
-    <a href="Day 1-20/3.Popup/index.html">Popup</a><br>
-    <a href="Day 1-20/4.Live Character Counter/index.html">Live Character Counter</a><br>
-    <a href="Day 1-20/5.Calculator/index.html">Calculator</a><br>
-    <a href="Day 1-20/6.Stopwatch/index.html">Stopwatch</a><br>
-    <a href="Day 1-20/7.Text Animation/index.html">JS Text Animation</a><br>
-    <a href="Day 1-20/8.Scrollbar Indicator/index.html">Scrollbar Indicator</a><br>
-    <a href="Day 1-20/9.Captcha Generator/index.html">Captcha Generator</a><br>
-    <a href="Day 1-20/10.JS Tabs/index.html">JS Tabs</a><br>
-    <a href="Day 1-20/11.Automatic Text/index.html">Automatic Text</a><br>
-    <a href="Day 1-20/12.Scrolling Images Animation/index.html">Scrolling Images Animation</a><br>
-    <a href="Day 1-20/13.Search Box/index.html">Search Box</a><br>
-    <a href="Day 1-20/14.Timeline/index.html">Timeline</a><br>
-    <a href="Day 1-20/15.Checklist/index.html">Checklist</a><br>
-    <a href="Day 1-20/16.Sorting By Tags/index.html">Sorting By Tags</a><br>
-    <a href="Day 1-20/17.Modal-window/index.html">Modal-window</a><br>
-    <a href="Day 1-20/18.Text Editor/index.html">Text Editor</a><br>
-    <a href="Day 1-20/19.Drawing App/index.html">Drawing App</a><br>
-    <a href="Day 1-20/20.Image Slider/index.html">Image Slider</a><br>
-    <a href="Day 1-20/21.Text To Speech/index.html">Text to Speech</a><br>
-    <a href="Day 1-20/22.Left Sidebar/index.html">Left Sidebar</a><br>
-    <a href="Day 1-20/23.Notes App/index.html">Notes App</a><br>
+    <div class="projects">
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Expend%20Cards.png" width="auto-fill" alt="JS Counter">
+            <a href="Day 1-20/2.Expend_Cards/index.html">Expend Cards</a><br>
+        </div>
+        
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Popup%20Box.png" width="auto-fill" alt="Project Image">
+            <a href="Day 1-20/3.Popup/index.html">Popup</a><br>
+        </div>
+        
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Live%20Character%20Counter.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/4.Live Character Counter/index.html">Live Character Counter</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Text_Animation.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/5.Calculator/index.html">Calculator</a><br>
+        </div>
+        
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/StopWatch.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/6.Stopwatch/index.html">Stopwatch</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Text_Animation.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/7.Text Animation/index.html">JS Text Animation</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Scrollbar_Indicator.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/8.Scrollbar Indicator/index.html">Scrollbar Indicator</a><br>
+        </div>
+    
+        <!-- <div class="container">
+            <img src="" alt="Project Image">
+            <a href="Day 1-20/9.Captcha Generator/index.html">Captcha Generator</a><br>
+        </div> -->
+        
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Text_Animation.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/11.Automatic Text/index.html">Automatic Text</a><br>
+        </div>
+        
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/ScrollAnimation.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/12.Scrolling Images Animation/index.html">Scrolling Images Animation</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Animated%20Search%20Box.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/13.Search Box/index.html">Search Box</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Animated%20Search%20Box.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/14.Timeline/index.html">Timeline</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Animated%20Search%20Box.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/15.Checklist/index.html">Checklist</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/SortingByTags.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/16.Sorting By Tags/index.html">Sorting By Tags</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Modal%20Window.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/17.Modal-window/index.html">Modal-window</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Modal%20Window.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/18.Text Editor/index.html">Text Editor</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Drawing%20App.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/19.Drawing App/index.html">Drawing App</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Drawing%20App.png" width="200px" alt="Project Image">
+            <a href="Day 1-20/20.Image Slider/index.html">Image Slider</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/Text%20to%20Speech.png" alt="Project Image">
+            <a href="Day 1-20/21.Text To Speech/index.html">Text to Speech</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/LeftSlidebar.png" alt="Project Image">
+            <a href="Day 1-20/22.Left Sidebar/index.html">Left Sidebar</a><br>
+        </div>
+    
+        <div class="container">
+            <img src="https://blog-website--harshpachani.repl.co/src/images/NotesApp.png" alt="Project Image">
+            <a href="Day 1-20/23.Notes App/index.html">Notes App</a><br>
+        </div>
+    </div>
+
 </body>
 </html>
